@@ -1,5 +1,7 @@
 
 import { useState } from 'react';
+import SingleFeedback from './SingleFeedback';
+
 
 const Feedback = () => {
   const [feedbackList, setFeedbackList] = useState([
@@ -21,13 +23,15 @@ const Feedback = () => {
   ]);
 
   return (
-    <div className='container mt-3'>
-      {feedbackList.map(feedback => (
-        <div key={feedback.id} className='card card-body mb-3'>
-          <p>{feedback.body}</p>
-        </div>
-      ))}
-         </div>
+    <div className='mt-3'>
+      <h1> Feedback</h1>
+        {
+          feedbackList.map(feedback => (
+          <SingleFeedback key={feedback.id} feedback={feedback} />
+          ))
+        }
+
+    </div>
   );
 }
 

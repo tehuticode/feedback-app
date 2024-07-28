@@ -1,18 +1,32 @@
+import { Fragment } from "react";
 
 const AddFeedback = () => {
   return (
-    <div>
-      <h2>Add Feedback</h2>
-      <form>
-        <div className="mb-3">
-          <label htmlFor="feedback" className="form-label">Feedback</label>
-          <input type="text" className="form-control" id="feedback" />
+    <Fragment>
+      <h1 className="text-primary">Add Feedback</h1>
+      <div className="card mb-3">
+        <div className="card-header bg-body-secondary">
+          Add Feedback
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
-      </form>
-    </div>
+        <div className="card-body">
+          <form>
+            <div className="mb-3">
+              <label htmlFor="body">Have your say below</label>
+              <textarea
+                className="form-control"
+                id="body"
+                placeholder="Your Feedback"
+                name="body"
+              ></textarea>
+            </div>
+            <div className="d-grid gap-2">
+              <input type="submit" value="Add Feedback" className="btn btn-success"/>
+            </div>
+          </form>
+        </div>
+      </div>
+    </Fragment>
   );
 }
 
 export default AddFeedback;
-
