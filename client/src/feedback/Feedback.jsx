@@ -22,12 +22,18 @@ const Feedback = () => {
     },
   ]);
 
+const handleDelete = id => {
+    console.log('Handle delete -  id: ${id}');
+    const newList = feedbackList.filter(post => post.id !== id);
+    setFeedbackList(newList);
+  }
+
   return (
     <div className='mt-3'>
       <h1> Feedback</h1>
         {
           feedbackList.map(feedback => (
-          <SingleFeedback key={feedback.id} feedback={feedback} />
+          <SingleFeedback key={feedback.id} feedback={feedback} handelDelete={handleDelete}/>
           ))
         }
 

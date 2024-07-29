@@ -5,7 +5,10 @@ import Footer from './layout/Footer';
 import About from './pages/About';
 import Feedback from './feedback/Feedback';
 import AddFeedback from './feedback/AddFeedback';
+import EditFeedback from './feedback/EditFeedback';
+
 import Blog from './pages/Blog';
+
 
 function App() {
   return (
@@ -17,6 +20,7 @@ function App() {
           <Route path='about' element={<About />} />
           <Route path='add' element={<AddFeedback />} />
           <Route path='/blog' element={<Blog />} />
+          <Route path='/edit:id' element={<EditFeedback />} />
         </Routes>
       </div>
       <Footer />

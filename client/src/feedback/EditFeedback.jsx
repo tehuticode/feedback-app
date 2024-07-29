@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
+import { useParams } from "react-router-dom";
 
-const AddFeedback = () => {
+const EditFeedback = (props) => {
   const [formData, setFormData ] = useState({
     id: 4,
     body: '',
@@ -44,8 +45,8 @@ const AddFeedback = () => {
                 id="body"
                 placeholder="Your Feedback"
                 name="body"
-                value={body}
-                onChange={e => onChange(e)}
+                //value={body}
+                //onChange={e => onChange(e)}
               >
               </textarea>
             </div>
@@ -59,4 +60,4 @@ const AddFeedback = () => {
   );
 }
 
-export default AddFeedback;
+export default EditFeedback;
